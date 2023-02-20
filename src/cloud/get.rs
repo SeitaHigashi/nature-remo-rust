@@ -1,3 +1,5 @@
+mod home;
+
 use super::api::API;
 
 pub enum GET {
