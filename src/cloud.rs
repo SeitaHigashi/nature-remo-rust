@@ -18,7 +18,7 @@ pub struct Client {
 impl Client {
     pub fn new(token: String) -> Self {
         Client {
-            token: token, 
+            token, 
             base_url: Url::parse("https://api.nature.global").unwrap(),
             client: reqwest::Client::new(),
         }
