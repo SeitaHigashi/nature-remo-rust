@@ -14,14 +14,14 @@ pub enum GET {
 impl API for GET {
     fn path(&self) -> String {
         match self {
-            Self::Appliances => String::from("/1/appliances"),
-            Self::Signals{ applianceid } => format!("/1/appliances/{}/signals/", applianceid),
-            Self::Devices => String::from("/1/devices"),
-            Self::Homes => String::from("/1/homes"),
-            Self::HomeDevices { homeid } => format!("/1/homes/{}/devices", homeid),
-            Self::HomeUsers{ homeid } => format!("/1/homes/{}/users", homeid),
-            Self::Invites{ invitetoken } => format!("/1/invites/{}", invitetoken),
-            Self::Users => String::from("/1/users/me"),
+            GET::Appliances => String::from("/1/appliances"),
+            GET::Signals{ applianceid } => format!("/1/appliances/{}/signals/", applianceid),
+            GET::Devices => String::from("/1/devices"),
+            GET::Homes => String::from("/1/homes"),
+            GET::HomeDevices { homeid } => format!("/1/homes/{}/devices", homeid),
+            GET::HomeUsers{ homeid } => format!("/1/homes/{}/users", homeid),
+            GET::Invites{ invitetoken } => format!("/1/invites/{}", invitetoken),
+            GET::Users => String::from("/1/users/me"),
         }
     }
 }
