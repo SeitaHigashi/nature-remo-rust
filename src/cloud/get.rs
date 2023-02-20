@@ -8,7 +8,7 @@ pub enum GET {
     HomeDevices{homeid: String},
     Users{homeid: String},
     Invites{invitetoken: String},
-    Me,
+    Users,
 }
 
 impl API for GET {
@@ -21,7 +21,7 @@ impl API for GET {
             Self::HomeDevices { homeid } => format!("/1/homes/{}/devices", homeid),
             Self::Users{ homeid } => format!("/1/homes/{}/users", homeid),
             Self::Invites{ invitetoken } => format!("/1/invites/{}", invitetoken),
-            Self::Me => String::from("/1/users/me"),
+            Self::Users => String::from("/1/users/me"),
         }
     }
 }
