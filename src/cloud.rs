@@ -1,5 +1,6 @@
 pub mod request;
 pub mod get;
+pub mod post;
 pub mod api;
 
 use self::get::GET;
