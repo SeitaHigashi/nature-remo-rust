@@ -1,4 +1,4 @@
-pub mod request;
+pub mod object;
 pub mod get;
 pub mod post;
 pub mod api;
